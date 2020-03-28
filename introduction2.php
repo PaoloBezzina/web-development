@@ -41,7 +41,7 @@ p    {color: red;}
     
     <br>
     
-    <a href="index.php">Back to home page tester</a>
+    <a href="index.php">Back to home page</a>
 
 </body>
 </html>
