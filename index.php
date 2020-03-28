@@ -41,7 +41,7 @@
     
     <br>
     
-    <form action="form.php" method="post">
+    <form action="formPOST.php" method="post">
 Name: <input type="text" name="name"><br>
 Surname: <input type="text" name="surname"><br>
 <input type="submit">
