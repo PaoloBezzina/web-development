@@ -15,7 +15,7 @@
     
 <head>
     <title>Testing</title>
-    
+    <link rel="stylesheet" type="text/css" href="styleSheet.css">    
 </head>
     
 <body style="background-color: palegoldenrod">

@@ -1,0 +1,76 @@
+/*http://www.barn-restaurant.com/Web-Background.jpg*/
+/*https://www.apellesdesign.com/wp-content/uploads/2018/04/res-1.jpg*/
+/*https://www.oxtailrestaurantedinburgh.co.uk/wp-content/uploads/2019/07/wood_background.jpg*/
+
+body {
+    margin: 0;
+    background-color:whitesmoke;
+  }
+  
+  /*Navigation bar features*/
+  ul.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+  
+  /*Navigation bar list features*/
+  ul.navigation li a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /*Navigation bar Hover on Item*/
+  ul.navigation li a:hover {
+    background-color: #111111;
+  }
+  
+  /*media query to change menu size on smaller screens*/
+  @media screen and (max-width: 500px) {
+    ul.navigation a {
+      float: none;
+      width: 100%;
+    }
+  }
+  
+  .hero-image{
+    background-image: url("https://www.oxtailrestaurantedinburgh.co.uk/wp-content/uploads/2019/07/wood_background.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-title {
+    text-align: right;
+    padding: 5%;
+    padding-bottom: 0%;
+    color: rgb(216, 216, 216);
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 300%;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: right;
+    color: rgb(216, 216, 216);
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 150%;
+    padding-right: 5%;
+    position: relative;
+  }
+  
+  p {
+    padding-left: 1%;
+  }
+  
+  p.big {
+    height: 1000px;
+  }
