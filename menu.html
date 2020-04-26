@@ -31,16 +31,18 @@
         <h1>Explore Our Menu</h1>
         
         <h2>Antipasti</h2>
-        <p>Item 1</p>
-        
-        <h2>Main Course</h2>
-        <p>Item 2</p>
-        <p>Item 3</p>
-        
-        <h2>Deserts</h2>
-        <p>Item 4</p>
+        {% for menuItem in menuItems %}
+            <div class="card">
+                <img src="{{menuItem.image}}" alt="{{menuItem.name}}" style="width:100%">
+                <div class="container">
+                    <h4><b>{{menuItem.name}}</b></h4>
+                    <p>{{menuItem.price}}</p>
+                </div>
+            </div>
+            <br/>
+        {% endfor %}
 
     </div>
 </body>
-
 </html>
+
