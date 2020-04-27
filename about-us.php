@@ -1,47 +1,28 @@
-<!DOCTYPE html>
+<?php
+    require_once __DIR__.'/bootstrap.php';
 
-<html>
+    $staff = [
+        [
+            'id'        =>  1,
+            'name'      =>  'Christopher Sciberras',
+            'image'     =>  'assets/images/temp_image_1.jpg',
+            'bio'       =>  "Mr. Christopher Sciberras is the founder and owner of Ta' Pinu Restaurant. Although he is the owner, he is still a huge asset in the day-to-day running of our Restaurant as he constantly helps in the preparation of dishes and serves food when the Restauant is busy."
+        ],
+        [
+            'id'        =>  2,
+            'name'      =>  'Sonia Sciberras',
+            'image'     =>  'assets/images/temp_image_2.jpg',
+            'bio'       =>  "Mrs. Sonia Sciberras is the Head Chef at Ta' Pinu Restaurant which from years of experience has never failed to delight customers by preparing dishes the traditional way."
+        ],
+        [
+            'id'        =>  3,
+            'name'      =>  'Nicholas Sciberras',
+            'image'     =>  'assets/images/temp_image_3.jpg',
+            'bio'       =>  "Mr. Nicholas Sciberras is an Assistant Manager at Ta' Pinu Restaurant who waits at tables during opening hours and also works on accounts and many other manegerial tasks along with his father Christopher when not at work."
+        ],
+    ];
 
-<head>
-    <link rel="stylesheet" href="style-sheet.css">
-    <link rel="shortcut icon" type="image/png" href="https://www.shareicon.net/data/512x512/2016/05/25/770336_fork_512x512.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Ta' Pinu Restuarant - About Us</title>
-</head>
-    
-<body>
-    
-    <div class="hero-image">
-        <h1 class="hero-title">Ta' Pinu Restuarant</h1>
-        <h2 class="hero-text">Traditional Maltese Restaurant</h2>
-        <ul class="navigation">
-            <li><a href="home.php">Home</a></li>
-            <li><a href="menu.php">Menu</a></li>
-            <li><a href="about-us.php">About Us</a></li>
-            <li><a href="contact-us.php">Contact Us</a></li>
-            <a class="navigation" href="favorites.php">
-                <img src="https://www.vippng.com/png/full/102-1027843_one-heart-png-transparent-png-download-white-heart.png">
-            </a>
-        </ul>
-        
-    </div>
+    //render creates an html page loading things from the database
+    echo $twig->render('/templates/about-us.html', ['staff' => $staff]);
 
-    <div class="content">
-        <h1>About Ta' Pinu Restaurant</h1>
-        <p>Ta' Pinu Restaurant was founded back in 1996 when Christopher Sciberras embarked upon a project of opening our Restaurant. Being family-based, the restaurant aims mainly to serve delicious traditional Maltese plates from the heart.</p>
         
-        <h2>Staff:</h2>
-        
-        <h3>Christopher Sciberras</h3>
-        <p>Mr. Christopher Sciberras is the founder and owner of Ta' Pinu Restaurant. Although he is the owner, he is still a huge asset in the day-to-day running of our Restaurant as he constantly helps in the preparation of dishes and serves food when the Restauant is busy.</p>
-        
-        <h3>Sonia Sciberras</h3>
-        <p>Mrs. Sonia Sciberras is the Head Chef at Ta' Pinu Restaurant which from years of experience has never failed to delight customers by preparing dishes the traditional way.</p>
-        
-        <h3>Nicholas Sciberras</h3>
-        <p>Mr. Nicholas Sciberras is an Assistant Manager at Ta' Pinu Restaurant who waits at tables during opening hours and also works on accounts and many other manegerial tasks along with his father Christopher when not at work.</p>
-    </div>
-</body>
-
-</html>

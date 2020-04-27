@@ -72,7 +72,7 @@ ul.navigation li a:hover {
 /*Background image manipulation*/
 
 .hero-image{
-  background-image: url("https://www.oxtailrestaurantedinburgh.co.uk/wp-content/uploads/2019/07/wood_background.jpg");
+  background-image: url("assets/images/header_background.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
