@@ -15,11 +15,11 @@
         <h1 class="hero-title">Ta' Pinu Restuarant</h1>
         <h2 class="hero-text">Traditional Maltese Restaurant</h2>
         <ul class="navigation">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-            <a class="navigation" href="favorites.html">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="menu.php">Menu</a></li>
+            <li><a href="about-us.php">About Us</a></li>
+            <li><a href="contact-us.php">Contact Us</a></li>
+            <a class="navigation" href="favorites.php">
                 <img src="https://www.vippng.com/png/full/102-1027843_one-heart-png-transparent-png-download-white-heart.png">
             </a>
         </ul>

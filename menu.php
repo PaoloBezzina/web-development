@@ -26,4 +26,4 @@
     ];
 
     //render creates an html page loading things from the database
-    echo $twig->render('menu.html', ['menuItems' => $food]);
+    echo $twig->render('/templates/menu.html', ['food' => $food]);
