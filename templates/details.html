@@ -1,14 +1,18 @@
 {% extends "/templates/layout.html" %}
 
 {% block content %}
-    <h1>{{menuItem.name}}</h1>
-    <p>{{menuItem.dishType}}</p>
-    <p>{{menuItem.price}}</p>
-    <ul>
-        <li>Calories: {{menuItem.calories}}</li>
-        <li>Allergies: {{menuItem.allergies}}</li>
-    </ul>
-
-    <p><a href="menu.php"> Back </a></p>
-    <img src="{{menuItem.image}}" alt="{{menuItem.name}}" style="width: 20%">
+    <div class="content_Title">
+        <h1>{{menuItem.name}}</h1>
+        <p>{{menuItem.dishType}}</p>
+        <p>{{menuItem.price}}</p>
+        <div class="content">
+            <ul>
+                <li>Calories: {{menuItem.calories}}</li>
+                <li>Allergies: {{menuItem.allergies}}</li>
+            </ul>
+        </div>
+        <p><a href="menu.php"> Back </a></p>
+        <img src="{{menuItem.image}}" alt="{{menuItem.name}}" style="width: 20%">
+        
+    </div>
 {% endblock %}
