@@ -4,7 +4,9 @@
 
 
 *{
-  margin:0 ;
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0;
 }
 
 
@@ -96,6 +98,16 @@ ul.navigation li a:hover {
   padding-right: 5%;
   position: relative;
 }
+
+.footer{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: flex-start
+}
+
+
 
 .content{
   display: flex;

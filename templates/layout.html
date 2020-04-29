@@ -12,28 +12,76 @@
     
 <body>
     
-    <div class="hero-image">
-        <h1 class="hero-title">Ta' Pinu Restuarant</h1>
-        <h2 class="hero-text">Traditional Maltese Restaurant</h2>
-        <ul class="navigation">
-            <li><a href="home.php">Home</a></li>
-            <li><a href="menu.php">Menu</a></li>
-            <li><a href="about-us.php">About Us</a></li>
-            <li><a href="contact-us.php">Contact Us</a></li>
-            <a class="navigation" href="favorites.php">
-                <img src="assets/images/favorites_icon.png" alt="favorites icon">
-            </a>
-        </ul>
-        
-    </div>
+    <header>
+        <div class="hero-image">
+            <h1 class="hero-title">Ta' Pinu Restuarant</h1>
+            <h2 class="hero-text">Traditional Maltese Restaurant</h2>
+            <ul class="navigation">
+                <li><a href="home.php">Home</a></li>
+                <li><a href="menu.php">Menu</a></li>
+                <li><a href="about-us.php">About Us</a></li>
+                <li><a href="contact-us.php">Contact Us</a></li>
+                <a class="navigation" href="favorites.php">
+                    <img src="assets/images/favorites_icon.png" alt="favorites icon">
+                </a>
+            </ul>
+            
+        </div>
+    </header>
 
-    <div class="content">
+    <main>
+        <div class="content">
 
-        {% block content %}
-        {% endblock %}
+            {% block content %}
+            {% endblock %}
 
-    </div>
+        </div>
+    </main> 
+
+    <footer>
+        <section class="ft-main">
+            <div class="ft-main-item">
+              <h2 class="ft-title">About</h2>
+              <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+            <div class="ft-main-item">
+              <h2 class="ft-title">Resources</h2>
+              <ul>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">eBooks</a></li>
+                <li><a href="#">Webinars</a></li>
+              </ul>
+            </div>
+            <div class="ft-main-item">
+              <h2 class="ft-title">Contact</h2>
+              <ul>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Sales</a></li>
+                <li><a href="#">Advertise</a></li>
+              </ul>
+            </div>
+            <div class="ft-main-item">
+              <h2 class="ft-title">Stay Updated</h2>
+              <p>Subscribe to our newsletter to get our latest news.</p>
+              <form>
+                <input type="email" name="email" placeholder="Enter email address">
+                <input type="submit" value="Subscribe">
+              </form>
+            </div>
+          </section>
+    </footer>
     
 </body>
 </html>
 
+<!--
+    google maps integration
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d808.4613527160825!2d14.531539829243366!3d35.85279398575795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e5b08f545da4d%3A0xcfaf04b3cec38614!2s11%20Triq%20Marsaxlokk%2C%20I%C5%BC-%C5%BBejtun!5e0!3m2!1sen!2smt!4v1588169680805!5m2!1sen!2smt" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+-->
