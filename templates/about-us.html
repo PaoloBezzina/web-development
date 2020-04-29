@@ -1,14 +1,14 @@
 {% extends "/templates/layout.html" %}
 
 {% block content %}
-    <div class="content_Title">
+    <div class="content">
         <h1>About Ta' Pinu Restaurant</h1>
         <p>Ta' Pinu Restaurant was founded back in 1996 when Christopher Sciberras embarked upon a project of opening our Restaurant. Being family-based, the restaurant aims mainly to serve delicious traditional Maltese plates from the heart.</p>
 
             
         <h2>Staff:</h2>
-    </div>
-            <div class = "content">
+    
+            <div class = "content_Items">
                 {% for staffMember in staff %}
                     <div class="card">
                         <img src="{{staffMember.image}}" alt="{{staffMember.name}}" style="width:100%">
@@ -20,6 +20,8 @@
                     <br/>
                 {% endfor %}
             </div>
+            
+        </div>
 {% endblock %}
 
 

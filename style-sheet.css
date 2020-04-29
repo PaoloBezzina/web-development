@@ -97,26 +97,20 @@ ul.navigation li a:hover {
   position: relative;
 }
 
-.content_Title{
+.content{
+  display: flex;
   margin-left: 2%;
-  flex-direction: column;
-  align-content: flex-start;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.content{
-  margin-left: 2%;
+.content_Items{
+  margin-left: 4%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: flex-start;
-}
-
-.content h3{
-  margin-left: 3%;
-}
-
-.content p{
-  margin-left: 5%;
 }
 
 p.scrolltest {
