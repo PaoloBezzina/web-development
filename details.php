@@ -1,39 +1,36 @@
 <?php
     require_once __DIR__.'/bootstrap.php';
+    require_once __DIR__.'/database.php';
+    
 
-    $menuItem = [
+    //getting database object
 
-            'id'        =>  1,
-            'image'     =>  'assets/images/bruschetta.jpg',
-            'name'      =>  'Bruschetta',
-            'price'     =>  '€12',
-            'dishType'  =>  'Starter',
-            'calories'  =>  '1500cal',
-            'allergies' =>  'dairy, gluten'
+    if(isset($_GET['a'])){
 
 
-    ];
+        $db = new Db();
+        $menuItemId = $db -> quote($_GET['a']);
+        $result = $db -> select("SELECT f.*, t.name as typeName FROM food f inner join type t on f.type = t.id WHERE f.id = ". $menuItemId );
 
-    //render creates an html page loading things from the database
-    echo $twig->render('/templates/details.html', ['menuItem' => $menuItem]);
+        if (count($result) > 0){
+            
+            //result has been found
+            $menuItem = [
+                'id'                => $result[0]['id'],
+                'typeName'          => $result[0]['typeName'],
+                'image'             => $result[0]['image'],
+                'name'              => $result[0]['name'],
+                'price'             => $result[0]['price'],
+                'diet'              => $result[0]['diet'],
+                'calories'          => $result[0]['calories'],
+                'allergies'         => $result[0]['allergies'],
+            ];
 
-    /*
-    [
-        'id'        =>  2,
-        'image'     =>  'assets/images/cheesy_garlic_bread.jpg',
-        'name'      =>  'Garlic Bread',
-        'price'     =>  '€9',
-        'dishType'  =>  'starter',
-        'calories'  =>  '1500cal',
-        'allergies' =>  'dairy, gluten'
-    ],
-    [
-        'id'        =>  3,
-        'image'     =>  'assets/images/halfchicken.jpg',
-        'name'      =>  'Half Chicken',
-        'price'     =>  '€5',
-        'dishType'  =>  'main',
-        'calories'  =>  '1500cal',
-        'allergies' =>  'dairy, gluten'
-    ],
-    */
+            //render creates an html page loading things from the database
+            echo $twig->render('/templates/details.html', ['menuItem' => $menuItem]);
+
+        }else{
+            echo $twig->render('/templates/error404.html');
+        }
+
+    }

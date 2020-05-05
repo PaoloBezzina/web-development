@@ -1,29 +1,25 @@
 <?php
     require_once __DIR__.'/bootstrap.php';
+    require_once __DIR__.'/database.php';
+    require_once __DIR__.'/typeMenu.php';
 
-    $food = [
-        [
-            'id'        =>  1,
-            'image'     =>  'assets/images/bruschetta.jpg',
-            'name'      =>  'Bruschetta',
-            'price'     =>  '€12',
-            'dishType'  =>  'starter'
-        ],
-        [
-            'id'        =>  2,
-            'image'     =>  'assets/images/cheesy_garlic_bread.jpg',
-            'name'      =>  'Garlic Bread',
-            'price'     =>  '€9',
-            'dishType'  =>  'starter'
-        ],
-        [
-            'id'        =>  3,
-            'image'     =>  'assets/images/halfchicken.jpg',
-            'name'      =>  'Half Chicken',
-            'price'     =>  '€5',
-            'dishType'  =>  'main'
-        ],
-    ];
+
+    if (isset($_GET['type'])){
+
+        $typeSelected = $db -> quote($_GET['type']);
+
+    }else{
+
+        $typeSelected = -1;
+    }
+
+
+    //getting database object
+    $db = new Db();
+
+    $food = $db -> select("SELECT f.id, f.image, f.name, t.name as typeName FROM food f inner join type t on f.type = t.id where (t.id = $typeSelected or $typeSelected = -1) order by f.name");
+    
+    
 
     //render creates an html page loading things from the database
-    echo $twig->render('/templates/menu.html', ['food' => $food]);
+    echo $twig->render('/templates/menu.html', ['food' => $food, 'itemType' => $itemTypes]);

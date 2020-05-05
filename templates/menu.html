@@ -1,10 +1,12 @@
 {% extends "/templates/layout.html" %}
 
+{% block menu %}
+    {% include '/templates/typeMenu.html' with {'itemType': itemType} %}
+{% endblock %}
+
 {% block content %}
     <div class="content">
         <h1>Explore Our Menu</h1>
-            
-        <h2>Antipasti</h2>
     
         <div class="content_Items">
             {% for menuItem in food %}
@@ -14,7 +16,7 @@
                         <h4><b>{{menuItem.name}} </b></h4>
                         <p>{{menuItem.price}} </p>
                         <br/>
-                        <p><a href="details.php?a={{menuItem.id}}">Find out more about {{menuItem.name}} </a></p>
+                        <p><a href="details.php?a={{menuItem.id}}">Find out more about&nbsp; {{menuItem.name}} </a></p>
                     </div>
                 </div>
                 <br/>
