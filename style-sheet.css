@@ -186,14 +186,14 @@ a:hover {
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  align-content: space-around
 }
 
 .content_Items{
   margin-left: 4%;
-  display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: baseline;
 }
 
 p.scrolltest {
