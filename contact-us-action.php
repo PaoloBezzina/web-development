@@ -38,6 +38,29 @@
 
         /* Set the mail message body. */
         $mail->Body = $formcontent;
+        
+        /* SMTP parameters. */
+   
+        /* Tells PHPMailer to use SMTP. */
+        $mail->isSMTP();
+   
+        /* SMTP server address. */
+        $mail->Host = 'smtp.gmail.com';//'smtp.empire.com';
+
+        /* Use SMTP authentication. */
+        $mail->SMTPAuth = TRUE;
+   
+        /* Set the encryption system. */
+        $mail->SMTPSecure = 'tls';
+   
+        /* SMTP authentication username. */
+        $mail->Username = 'tapinurestaurant@gmail.com';
+   
+        /* SMTP authentication password. */
+        $mail->Password = 'TPRbpm418';
+   
+        /* Set the SMTP port. */
+        $mail->Port = 587;
 
         /* Finally send the mail. */
         $mail->send();
