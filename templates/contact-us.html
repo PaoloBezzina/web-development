@@ -8,16 +8,16 @@
             <div class = "content_Items">
                 <form id="contact-form" action= "contact-us-action.php"  method="POST">
                     <label for = "name"> First name: </label><br>
-                    <input type = "text" id = "name" size="30" name = "name" placeholder="Enter First Name"><br>
+                    <input type = "text" id = "name" size="30" name = "name" placeholder="Enter First Name" required><br>
 
                     <label for = "surname">Surname:</label><br>
-                    <input type = "text" id = "surname" size="30" name = "surname" placeholder="Enter Surname"><br>
+                    <input type = "text" id = "surname" size="30" name = "surname" placeholder="Enter Surname" required><br>
 
                     <label for = "email">Email Address:</label><br>
-                    <input type = "email" id = "email" size="30" name = "email" placeholder="Enter email address"><br>
+                    <input type = "email" id = "email" size="30" name = "email" placeholder="Enter email address" required><br>
 
                     <label for = "message">Message:</label><br>
-                    <textarea name="message" form="contact-form" rows="15" cols="50"></textarea>
+                    <textarea required name="message" form="contact-form" rows="15" cols="50" maxlength="200" minlength="5" required></textarea>
 
                     </br></br> <input type = "submit" value="Send">
                 </form>
