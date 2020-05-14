@@ -1,0 +1,30 @@
+{% extends "/templates/layout.html" %}
+
+{% block content %}
+
+    <div class="content">
+
+        <h1>Register</h1>
+            <div class = "content_Items">
+                <form id="Register-Form" action= "register-action.php"  method="POST">
+                    <label for = "username"> Username: </label><br>
+                    <input type = "text" id = "username" size="30" name = "username" placeholder="Enter Username" required><br>
+
+                    <label for = "password">Password:</label><br>
+                    <input type = "password" id = "password1" size="30" name = "password1" placeholder="Enter Password" required><br>
+
+                    <label for = "password">Confirm Password:</label><br>
+                    <input type = "password" id = "password2" size="30" name = "password2" placeholder="Enter Password" required><br>
+
+                    </br> <input type = "submit" value="Register"></br></br>
+                </form>
+
+                <p>Already have an account?</p>
+                <a href="/login.php">Sign in Here</a>
+
+            </div>
+
+    </div>
+
+{% endblock %}
+

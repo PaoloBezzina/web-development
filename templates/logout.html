@@ -1,0 +1,21 @@
+{% extends "/templates/layout.html" %}
+
+{% block content %}
+
+
+    <div class="content">
+
+    </br></br>
+
+        <h3>You are signed in as user&nbsp{{username}} </h3>
+
+    </br></br>
+
+        <form method="POST" action="logout-action.php">
+            <button type="submit">Logout</button>
+        </form>
+
+    </div>
+
+{% endblock %}
+    
