@@ -8,15 +8,15 @@
             
         <h2>Staff:</h2>
     
-            <div class = "content_Items">
+            <div class = "cards">
                 {% for staffMember in staff %}
-                    <div class="card">
+                    <article class="card">
                         <img src="{{staffMember.image}}" alt="{{staffMember.name}}" style="width:100%">
                         <div class="container">
                             <h4><b>{{staffMember.name}}</b></h4>
                             <p>{{staffMember.bio}}</p>
                         </div>
-                    </div>
+                    </article>
                     <br/>
                 {% endfor %}
             </div>
