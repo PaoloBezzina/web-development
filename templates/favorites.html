@@ -6,11 +6,30 @@
 
         <h1>Items in favorites</h1>
 
-        <div class="content_Items">
-            <p>Item 1</p>
-            <p>Item 2</p>
-            <p>Item 3</p>
+        <div class="card_Container">
+        
+            <div class="cards">
+                {% for favItem in menuItem %}
+                    <div class="card">
+                        <img src="{{favItem.image}}" alt="{{favItem.name}}" style="width:100%">
+                        <div class="container">
+                            <h4><b>{{favItem.name}} </b></h4>
+                            <p>{{favItem.price}} </p>
+                            <ul >
+                                <li>Calories: {{favItem.calories}} </li>
+                                <li>Allergies: {{favItem.allergies}} </li>
+                                <li>Diet: {{favItem.diet}} </li>
+                            </ul>
+                            <br/>
+                            <form id="remove=from-fav" action= "favorites-remove-action.php"  method="POST">
+                                <input type = "submit" value="Remove from Favorites">
+                                <input type = "hidden" name="a" value="{{favItem.id}}">
+                            </form>
+                        </div>
+                    </div>
+                    <br/>
+                {% endfor %}
+            </div>
         </div>
-
     </div>
 {% endblock %}

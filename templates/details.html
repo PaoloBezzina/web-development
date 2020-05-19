@@ -15,8 +15,22 @@
             </ul>
         </div>
 
-        <p><a href="menu.php"> Back </a></p>
+        </br>
+
         <img src="{{menuItem.image}}" alt="{{menuItem.name}} " style="width: 20%">
-        
+
+        </br> 
+
+        <form id="menu" action= "menu.php"  method="POST">
+            <input type = "submit" value="Back to menu">
+        </form>
+
+        </br>
+
+        <form id="add-to-fav" action= "/favorites-action.php"  method="POST">
+            <input type = "submit" value="Add to Favorites">
+            <input type = "hidden" name="a" value="{{menuItem.id}}">
+        </form>
+
     </div>
 {% endblock %}
