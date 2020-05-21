@@ -103,10 +103,11 @@
         $mail->Password = 'icqdjutisaassnyl';
    
         /* Set the SMTP port. */
-        $mail->Port = 587;
+        $mail->Port = 587;   
 
         /* Finally send the mail. */
         $mail->send();
+
 
         $isSent = TRUE;
 
