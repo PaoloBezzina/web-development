@@ -246,59 +246,63 @@ a:hover {
 .home-container {
   box-sizing: border-box;
   align-items: center;
-  justify-content: center;
+  justify-content: safe space-evenly ;
   height: 100%;
-  margin: 0 auto;
+  margin: 2% 5%;
 }
 
 .row {
-  width: 100%;
+  width: 95%;
   height: 100%;
-  max-width: 1000px;
-  margin: 10px 0;
+  margin-left: 10px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .img {
   height: 50%;
-  margin: 10px;
   width: 100%;
+  flex-grow: 3;
   box-shadow: 10px 14px 20px 0px darkgray;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  transition: transform 0.8s;
   
 }
+
+.home-text {
+  position:relative;
+  bottom:30px;
+  left:0px;
+  visibility:hidden;
+  }
 
 
 @media screen and (min-width: 800px) {
   .row{
     height: 600px; 
+    
   }
   
   .img{
     height: 50%;  
   }
+
+  .home-text:hover {
+    visibility:visible;
+  }
+  
+  .img:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
   
   .row-a {
-    width: 24%;
+    width: 25%;
+    margin: 5px;
   }
 
   .row-b {
     width: 70%;
+    margin: 5px;
   }
 }
 
-.zoom {
-  padding: 50px;
-  background-color: darkgray;
-  transition: transform .2s; 
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
 
-.zoom:hover {
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
