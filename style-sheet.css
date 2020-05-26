@@ -258,22 +258,26 @@ a:hover {
   margin-left: 10px;
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .img {
+  position: relative;
   height: 50%;
   width: 100%;
   flex-grow: 3;
   box-shadow: 10px 14px 20px 0px darkgray;
   transition: transform 0.8s;
-  
+  text-align: center;
+  color: whitesmoke;
 }
 
 .home-text {
-  position:relative;
-  bottom:30px;
-  left:0px;
-  visibility:hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible;
   }
 
 
@@ -288,7 +292,8 @@ a:hover {
   }
 
   .home-text:hover {
-    visibility:visible;
+    transform: scale(1.2)
+    visibility: visible;
   }
   
   .img:hover {
