@@ -63,8 +63,8 @@ Year: <input type="number" name="year"><br>
     
    
     <?php
-    echo ("<br>");      //date
-    echo date("d-M-Y");
+    echo ("<br>");      //date and time
+    echo date("d-M-Y H:i:s");
     echo ("<br><br>");
 
 
