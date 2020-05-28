@@ -19,9 +19,12 @@
         <div class="card_Container">
         
             <div class="cards">
+                
                 {% for favItem in menuItem %}
+
                     <div class="card">
                         <img src="{{favItem.image}}" alt="{{favItem.name}}" style="width:100%">
+
                         <div class="container">
                             <h4><b>{{favItem.name}} </b></h4>
                             <p>{{favItem.price}} </p>
@@ -35,11 +38,15 @@
                                 <input type = "submit" value="Remove from Favorites">
                                 <input type = "hidden" name="a" value="{{favItem.id}}">
                             </form>
+
                         </div>
                     </div>
                     <br/>
+
                 {% endfor %}
+
             </div>
         </div>
     </div>
+
 {% endblock %}
