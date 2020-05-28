@@ -15,11 +15,11 @@
 
         $db = new Db();
 
-        $username = $_SESSION['username'];
+        $username = $_SESSION['username'];      //din irridu nippruvawa bil quote() function
         
-        $foodId = $_POST['a'];
+        $foodId = $_POST['a'];                  
         
-        $query = "INSERT INTO favorites (username, foodId) VALUES('$username', '$foodId')";
+        $query = "INSERT INTO favorites (username, foodId) VALUES('$username', '$foodId')";     //halli awekk ma toqodx taghmel ' ' madwar il variables
         $db -> query($query);
         
         array_push($success, "Successfully added Item to Favorites");

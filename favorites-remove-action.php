@@ -8,12 +8,12 @@
 
     $db = new Db();
 
-    $username = $_SESSION['username'];
+    $username = quote($_SESSION['username']);
         
     $foodId = $_POST['a'];
         
-    $query = "DELETE FROM favorites WHERE foodId = $foodId";
-    $db -> query($query);
+    $query = "DELETE FROM favorites WHERE foodId = $foodId AND username = ".$username;        //query to remove the specified favorite
+    $db -> query($query);        //this actually queries the database
         
     array_push($success, "Successfully removed Item to Favorites");
 

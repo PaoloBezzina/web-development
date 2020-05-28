@@ -60,9 +60,11 @@ class Db {
         $rows = array();
         $result = $this -> query($query);
         if($result === false) {
+            //error handling
             return false;
         }
         while ($row = $result -> fetch_assoc()) {
+            // populates rows array
             $rows[] = $row;
         }
         return $rows;
