@@ -1,7 +1,7 @@
 <?php
-    require_once __DIR__.'/bootstrap.php';
-    require_once __DIR__.'/database.php';
-    require_once __DIR__.'/typeMenu.php';
+    require_once __DIR__.'/Bootstrap.php';
+    require_once __DIR__.'/Database.php';
+    require_once __DIR__.'/TypeMenu.php';
 
 
     if (isset($_GET['type'])){

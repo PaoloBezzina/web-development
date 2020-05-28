@@ -1,17 +1,17 @@
 <?php 
 
-    require_once __DIR__.'/bootstrap.php';
+    require_once __DIR__.'/Bootstrap.php';
 
     session_start(); 
 
     if (!isset($_SESSION['username'])) {
-            include '/login.php';
-        header('location: login.php');
+            include '/Login.php';
+        header('location: Login.php');
     }
 
     if (isset($_SESSION['username'])) {
-        include '/logout.php';
-        header('location: logout.php');
+        include '/Logout.php';
+        header('location: Logout.php');
     }
 
 ?>
