@@ -31,6 +31,8 @@
             echo $twig->render('/templates/details.html', ['menuItem' => $menuItem]);
 
         }else{
+
+            //renders error page
             echo $twig->render('/templates/error404.html');
         }
 

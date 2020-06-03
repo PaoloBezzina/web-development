@@ -12,12 +12,13 @@
         
     $foodId = $_POST['a'];
         
-    $query = "DELETE FROM favorites WHERE foodId = ". $foodId ." AND username = '" . $username ."'" ;        //query to remove the specified favorite
-    $db -> query($query);        //this actually queries the database
+    $query = "DELETE FROM favorites WHERE foodId = ". $foodId ." AND username = '" . $username ."'" ;        //defining query to remove the specified favorite
+    $db -> query($query);        //queries the database with the previously defined query
         
     array_push($success, "Successfully removed Item to Favorites");
 
 
     if($success > 0){
+        //renders success page
         echo $twig -> render('/templates/outcome.html', ['outcome' => $success]);
     }

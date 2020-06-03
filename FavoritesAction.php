@@ -27,5 +27,6 @@
     }
 
     if($success > 0){
+        //renders success page
         echo $twig -> render('/templates/outcome.html', ['outcome' => $success]);
     }
