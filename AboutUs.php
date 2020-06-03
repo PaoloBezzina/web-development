@@ -1,7 +1,8 @@
 <?php
     require_once __DIR__.'/Bootstrap.php';
 
-    $staff = [          //data for staff
+    //array storing data of staff
+    $staff = [
         [
             'id'        =>  1,
             'name'      =>  'Malcolm Agius',

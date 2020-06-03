@@ -12,12 +12,15 @@
     /* Create a new PHPMailer object. Passing TRUE to the constructor enables exceptions. */
     $mail = new PHPMailer(TRUE);
 
+    //setting variables from user input data from form
 
     $name = $_POST['name'];
     $surname = $_POST['surname'];
     $email = $_POST['email'];
     $message = $_POST['message'];
     
+    //contructing email assets
+
     $recipient = "tapinurestaurant@gmail.com";
     $recipientName = "Ta' Pinu Restaurant";
     $subject = "Contact Form";
@@ -37,12 +40,12 @@
         /* Set the subject. */
         $mail->Subject = $subject;
 
-        /* Set the mail message body. */
+        //Set the mail message body. 
         $mail->Body = $formcontent;
         
         /* SMTP parameters. */
    
-        /* Tells PHPMailer to use SMTP. */
+        //Tells PHPMailer to use SMTP.
         $mail->isSMTP();
 
         /* 
@@ -50,44 +53,45 @@
         $mail->SMTPDebug = 2;
         */
    
-        /* SMTP server address. */
+        // SMTP server address.
         $mail->Host = 'smtp.gmail.com';//'smtp.empire.com';
 
-        /* Use SMTP authentication. */
+        // Use SMTP authentication.
         $mail->SMTPAuth = TRUE;
    
-        /* Set the encryption system. */
+        //Set the encryption system.
         $mail->SMTPSecure = 'tls';
    
-        /* SMTP authentication username. */
+        //SMTP authentication username.
         $mail->Username = 'tapinurestaurant@gmail.com';
    
-        /* SMTP authentication password. */
+        //SMTP authentication password.
         $mail->Password = 'icqdjutisaassnyl';
    
-        /* Set the SMTP port. */
+        //Set the SMTP port.
         $mail->Port = 587;
 
-        /* Finally send the mail. */
+        //Finally send the mail.
         $mail->send();
 
         $isSent = TRUE;
 
     }catch (Exception $e){
 
-    /* PHPMailer exception. */
+    // PHPMailer exception.
         echo $e-> errorMessage();
 
         $isSent = FALSE;
 
     }catch (\Exception $e){
 
-    /* PHP exception (note the backslash to select the global namespace Exception class). */
+    // PHP exception
         echo $e-> errorMessage();
 
         $isSent = FALSE;
     }
 
+    //renders the correct page according to wheter the email was sent succesfully or not 
     if($isSent==TRUE){
         echo $twig->render('/templates/emailSent.html');
     }else{
